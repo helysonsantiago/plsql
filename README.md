@@ -89,16 +89,4 @@ Este repositório contém pacotes PL/SQL que implementam operações relacionada
 5. **Personalização:**
    - Modifique os scripts conforme a estrutura e requisitos específicos do seu banco de dados.
 
----
 
-## **Estrutura do Repositório**
-
-```plaintext
-├── packages/
-│   ├── pkg_aluno.pks
-│   ├── pkg_aluno.pkb
-│   ├── pkg_disciplina.pks
-│   ├── pkg_disciplina.pkb
-│   ├── pkg_professor.pks
-│   ├── pkg_professor.pkb
-└── README.md
