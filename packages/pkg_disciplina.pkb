@@ -2,7 +2,7 @@ CREATE OR REPLACE PACKAGE BODY pkg_disciplina IS
     PROCEDURE cadastrar_disciplina(p_nome IN VARCHAR2, p_descricao IN VARCHAR2, p_carga_horaria IN NUMBER) IS
     BEGIN
         INSERT INTO DISCIPLINAS (ID_DISCIPLINA, NOME, DESCRICAO, CARGA_HORARIA)
-        VALUES (SEQ_DISCIPLINA.NEXTVAL, p_nome, p_descricao, p_carga_horaria);
+        VALUES (SEQ_DISCIPLINA_ID.NEXTVAL, p_nome, p_descricao, p_carga_horaria);
     END cadastrar_disciplina;
 
     PROCEDURE total_alunos_disciplina IS
