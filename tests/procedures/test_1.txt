@@ -1,6 +1,0 @@
-BEGIN
-    pkg_aluno.excluir_aluno(1);
-    pkg_disciplina.cadastrar_disciplina('História', 'Curso de História Antiga', 30);
-    pkg_professor.total_turmas_professor;
-END;
-/

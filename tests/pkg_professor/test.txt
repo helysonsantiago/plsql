@@ -1,0 +1,15 @@
+DECLARE
+
+    v_total_turmas NUMBER;
+    v_professor_nome VARCHAR2(100);
+BEGIN
+     DBMS_OUTPUT.PUT_LINE('Total de Turmas por Professor (com mais de 1 turma):');
+    pkg_professor.total_turmas_professor;
+    
+      v_total_turmas := pkg_professor.total_turmas_func(1);
+    DBMS_OUTPUT.PUT_LINE('Total de turmas do professor com ID 1: ' || v_total_turmas);
+
+     v_professor_nome := pkg_professor.professor_disciplina_func(1);
+    DBMS_OUTPUT.PUT_LINE('Professor da disciplina com ID 1: ' || v_professor_nome);
+    
+END;

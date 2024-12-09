@@ -1,0 +1,14 @@
+DECLARE
+
+    v_nome_aluno VARCHAR2(100);
+BEGIN
+      pkg_aluno.excluir_aluno(1);
+    DBMS_OUTPUT.PUT_LINE('Aluno com ID 1 excluído com sucesso!');
+    
+     DBMS_OUTPUT.PUT_LINE('Alunos maiores de 18 anos:');
+    pkg_aluno.listar_alunos_maiores_de_18;
+    
+        DBMS_OUTPUT.PUT_LINE('Alunos do Curso com ID 1:');
+    pkg_aluno.listar_alunos_por_curso(1);
+    
+END;
