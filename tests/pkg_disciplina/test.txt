@@ -5,14 +5,15 @@ DECLARE
 BEGIN
      pkg_disciplina.cadastrar_disciplina('Matemática', 'Disciplina de Cálculo', 60);
     DBMS_OUTPUT.PUT_LINE('Disciplina cadastrada com sucesso!');
-    
-       DBMS_OUTPUT.PUT_LINE('Total de Alunos por Disciplina (com mais de 10 alunos):');
-    pkg_disciplina.total_alunos_por_disciplina;
 
-      v_media_idade := pkg_disciplina.media_idade_por_disciplina(1);
+       DBMS_OUTPUT.PUT_LINE('Total de Alunos por Disciplina (com mais de 10 alunos):');
+    pkg_disciplina.total_alunos_disciplina;
+
+    -- Erro nesse teste >:( -> T-T
+      v_media_idade := pkg_disciplina.media_idade_disciplina(1);
     DBMS_OUTPUT.PUT_LINE('Média de idade dos alunos da disciplina com ID 1: ' || v_media_idade);
     
       DBMS_OUTPUT.PUT_LINE('Alunos matriculados na Disciplina com ID 1:');
-    pkg_disciplina.listar_alunos_por_disciplina(1);
+    pkg_disciplina.listar_alunos_disciplina(1);
     
 END;
