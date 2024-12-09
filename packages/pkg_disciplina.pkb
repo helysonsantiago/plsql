@@ -18,17 +18,18 @@ CREATE OR REPLACE PACKAGE BODY pkg_disciplina IS
         END LOOP;
     END total_alunos_disciplina;
 
-    FUNCTION media_idade_disciplina(p_id_disciplina IN NUMBER) RETURN NUMBER IS
+   FUNCTION media_idade_disciplina(p_id_disciplina IN NUMBER) RETURN NUMBER IS
         v_media_idade NUMBER;
     BEGIN
-        SELECT AVG(a.idade)
+        SELECT AVG(EXTRACT(YEAR FROM SYSDATE) - EXTRACT(YEAR FROM a.DATA_NASCIMENTO)) AS MEDIA_IDADE
         INTO v_media_idade
         FROM ALUNOS a
-        JOIN MATRICULAS m ON a.id_aluno = m.id_aluno
-        WHERE m.id_disciplina = p_id_disciplina;
+        JOIN MATRICULAS m ON a.ID_ALUNO = m.ID_ALUNO
+        WHERE m.ID_DISCIPLINA = p_id_disciplina;
         
         RETURN v_media_idade;
     END media_idade_disciplina;
+
 
     PROCEDURE listar_alunos_disciplina(p_id_disciplina IN NUMBER) IS
         CURSOR c_alunos IS
