@@ -134,15 +134,9 @@ Este pacote oferece procedures e funções para gestão dos professores e turmas
 ## **Instruções de Execução**
 
 1. **Configuração Inicial:**
-   - Crie as tabelas `ALUNOS`, `DISCIPLINAS`, `MATRICULAS`, `PROFESSORES` e `TURMAS` conforme a modelagem do seu sistema.
+   - Copie o conteudo do arquivo `todos_os_comandos.sql`, que está na raiz do projeto e cole no `LIVE SQL ORACLE` por fim, Execute os comandos.
 
-2. **Carregando os Pacotes:**
-   - Execute os arquivos `.pks` (especificação) e `.pkb` (corpo) na ordem correta:
-     1. `pkg_aluno.pks` e `pkg_aluno.pkb`
-     2. `pkg_disciplina.pks` e `pkg_disciplina.pkb`
-     3. `pkg_professor.pks` e `pkg_professor.pkb`
-
-3. **Testando os Pacotes:**
+2. **Testando os Pacotes:**
    - Utilize blocos PL/SQL anônimos para testar as procedures e funções. Exemplos:
      ```sql
      BEGIN
